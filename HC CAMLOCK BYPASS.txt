@@ -1,0 +1,8 @@
+for , con in next, getconnections(workspace.CurrentCamera.Changed) do
+  task.wait()
+    con:Disable()
+end
+for , con in next, getconnections(workspace.CurrentCamera:GetPropertyChangedSignal("CFrame")) do
+   task.wait()
+    con:Disable()
+end
